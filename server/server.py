@@ -72,5 +72,5 @@ def predict_home_price():
     return response
 
 if __name__ == "__main__":
-    loadartifacts()
-    app.run(debug=True)
+   loadartifacts()
+   app.run(debug=True)
