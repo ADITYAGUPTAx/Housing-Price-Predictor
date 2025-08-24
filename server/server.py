@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-import util
+from . import util   # relative import
 
 app = Flask(__name__)
 
