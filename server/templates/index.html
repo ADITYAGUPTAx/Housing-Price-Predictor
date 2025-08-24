@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangalore House Price Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Bangalore Housing Price Predictor 🏠</h1>
+    <p class="subtitle">Estimate property prices across the city with ease</p>
+
+    <form id="prediction-form" class="card">
+      <div class="input-group">
+        <label for="sqft">Square Feet</label>
+        <input type="number" id="sqft" placeholder="Enter area in sqft" required>
+      </div>
+
+      <div class="input-group">
+        <label for="bhk">BHK</label>
+        <input type="number" id="bhk" placeholder="e.g. 2" required>
+      </div>
+
+      <div class="input-group">
+        <label for="bath">Bathrooms</label>
+        <input type="number" id="bath" placeholder="e.g. 2" required>
+      </div>
+
+      <div class="input-group">
+        <label for="location">Location</label>
+        <select id="location" required></select>
+      </div>
+
+      <button type="submit" class="btn">Predict Price</button>
+    </form>
+
+    <div id="result" class="result-card"></div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
