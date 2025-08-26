@@ -13,5 +13,6 @@ The app has a clean, minimalistic UI and real-time predictions through an intera
 
 You can access using this link: https://housing-price-predictor-tlay.onrender.com .
 
-Its hosted freely on render so it can a couple of minutes to load.
+It is hosted freely on render so it can take a couple of minutes to load, you can also download the files and run it locally by just running the server.py file.
+
 
