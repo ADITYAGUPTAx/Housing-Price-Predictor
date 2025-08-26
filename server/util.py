@@ -1,7 +1,8 @@
 import json
 import pickle
-import numpy as np
+import os
 import pandas as pd
+import numpy as np
 
 __locations = None
 __data_columns = None
@@ -34,11 +35,23 @@ def getlocations():
 def loadartifacts():
     global __locations, __data_columns, __model
     print("Loading artifacts......")
-    with open("C:\\Users\\aditya\\Documents\\Bangalore housing price predictor\\server\\artifacts\\columns.json", 'r') as f:
+
+    # Get base directory of this file
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Define paths relative to this file
+    columns_path = os.path.join(base_dir, "artifacts", "columns.json")
+    model_path = os.path.join(base_dir, "artifacts", "model.pickle")
+
+    # Load columns
+    with open(columns_path, 'r') as f:
         __data_columns = json.load(f)["data_columns"]
         __locations = __data_columns[3:]
-    with open("C:\\Users\\aditya\\Documents\\Bangalore housing price predictor\\server\\artifacts\\model.pickle", 'rb') as f:
+
+    # Load model
+    with open(model_path, 'rb') as f:
         __model = pickle.load(f)
+
     print("Artifacts loaded successfully")
 
 if __name__ == "__main__":
