@@ -56,5 +56,3 @@ def loadartifacts():
 
 if __name__ == "__main__":
     loadartifacts()
-    print(getlocations())
-    print(get_price("yelenahalli", 2000, 3, 2))
