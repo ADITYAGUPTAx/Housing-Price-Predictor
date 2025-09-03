@@ -59,15 +59,18 @@ The model is trained on real Bangalore housing market data.
    ```bash
    git clone https://github.com/ADITYAGUPTAx/Housing-Price-Predictor.git
    cd Housing-Price-Predictor
-Install Dependencies
+
+2. Install Dependencies
 
 pip install -r requirements.txt
 
 
-Run Locally
-
+3.Run Locally
+```bash
 python server.py
+
 
 
 Open your browser at http://localhost:5000
 Enter housing details and get an instant price prediction
+
