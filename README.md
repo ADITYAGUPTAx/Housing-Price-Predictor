@@ -22,7 +22,9 @@ The model is trained on real Bangalore housing market data.
 - Location (neighborhood, one-hot encoded)  
 - Square Footage (size of the property in sq ft)  
 - Bedrooms (BHK)  
-- Bathrooms  
+- Bathrooms
+- <img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/19eaa188-7f45-4cfc-89bb-4de22669ed87" />
+  
 
 ---
 
@@ -55,22 +57,20 @@ The model is trained on real Bangalore housing market data.
 
 ## How to Use  
 
-1. Clone the Repository  
-   ```bash
-   git clone https://github.com/ADITYAGUPTAx/Housing-Price-Predictor.git
-   cd Housing-Price-Predictor
+```bash
+# Clone the Repository
+git clone https://github.com/ADITYAGUPTAx/Housing-Price-Predictor.git
+cd Housing-Price-Predictor
 
-2. Install Dependencies
-
+# Install Dependencies
 pip install -r requirements.txt
 
-
-3.Run Locally
-```bash
+# Run Locally
 python server.py
 
 
 
 Open your browser at http://localhost:5000
 Enter housing details and get an instant price prediction
+
 
